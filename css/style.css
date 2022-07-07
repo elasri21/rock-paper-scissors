@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:wght@600;700&family=Barlow:wght@600&family=Cairo:wght@300;400;600&family=Commissioner:wght@400;500;700&family=Epilogue:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,700&family=Josefin+Sans:wght@300&family=Manrope:wght@800&family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600;700&family=Outfit:wght@400;700&family=Overpass:wght@300;600&family=Poppins:wght@300;500;700&display=swap");
+.to-pick {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid;
+  background-color: white;
+  position: relative;
+}
+.to-pick.paper {
+  border-color: #4865f4;
+}
+.to-pick.scissors {
+  border-color: #ec9e0e;
+}
+.to-pick.rock {
+  border-color: #dc2e4e;
+}
+.to-pick img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.house div {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid;
+  background-color: white;
+  position: relative;
+}
+.house div.paper {
+  border-color: #4865f4;
+}
+.house div.scissors {
+  border-color: #ec9e0e;
+}
+.house div.rock {
+  border-color: #dc2e4e;
+}
+.house div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#1f3756, #141539);
+}
+.container .content .head {
+  padding: 20px;
+  border: 2px solid #606e85;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.container .content .head h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.container .content .head .score {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+.container .content .head .score span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #2a46c0;
+}
+.container .content .head .score span.number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3b4363;
+}
+.container .content .elements {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container .content .elements div {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+.container .content .elements div::after {
+  content: "";
+  height: 4px;
+  background-color: #606e85;
+  position: absolute;
+}
+.container .content .elements div.paper {
+  border-color: #4865f4;
+  display: inline-block;
+  margin-right: 50px;
+}
+.container .content .elements div.paper::after {
+  right: -100px;
+  top: 60px;
+  width: 93px;
+}
+.container .content .elements div.scissors {
+  border-color: #ec9e0e;
+  display: inline-block;
+}
+.container .content .elements div.scissors::after {
+  right: 40px;
+  top: 149px;
+  width: 93px;
+  transform: rotate(-59deg);
+}
+.container .content .elements div.rock {
+  border-color: #dc2e4e;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .content .elements div.rock::after {
+  right: 66px;
+  top: -33px;
+  width: 77px;
+  transform: rotate(59deg);
+}
+.container .content .elements div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .content .win-container {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .content .win-container div {
+  text-align: center;
+}
+.container .content .win-container div h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+}
+.container .content .win-container div h4.play-again {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.container .content .win-container div button {
+  border: 1px solid #606e85;
+  outline: none;
+  background: white;
+  color: #3b4363;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.container .content .rules {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+.container .content .rules button {
+  outline: none;
+  border: 2px solid #606e85;
+  padding: 6px 15px;
+  text-align: center;
+  border-radius: 4px;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container .content .rules .how-to-play {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.container .content .rules .how-to-play .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.container .content .rules .how-to-play .top h3 {
+  color: #3b4363;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.container .content .rules .how-to-play .top i {
+  font-size: 15px;
+  color: #ddd;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

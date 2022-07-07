@@ -1,0 +1,48 @@
+.to-pick {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid;
+    background-color: $white;
+    position: relative;
+    &.paper{
+        border-color: $paper-first;
+    }
+    &.scissors{
+        border-color: $scissors-first;
+    }
+    &.rock{
+        border-color: $rock-first;
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.house {
+    div {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 8px solid;
+        background-color: $white;
+        position: relative;
+        &.paper{
+            border-color: $paper-first;
+        }
+        &.scissors{
+            border-color: $scissors-first;
+        }
+        &.rock{
+            border-color: $rock-first;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
