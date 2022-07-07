@@ -20,6 +20,7 @@ body {
     align-items: center;
     background: linear-gradient($radial-gradient-first, $radial-gradient-second);
     .content {
+        width: 80%;
         .head {
             padding: 20px;
             border: 2px solid $header-outline;
@@ -115,7 +116,9 @@ body {
             }
         }
         .win-container {
-
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
             display: none;
             justify-content: space-between;
             align-items: center;
